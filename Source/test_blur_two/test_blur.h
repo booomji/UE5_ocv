@@ -6,7 +6,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "PreOpenCVHeaders.h"
-#include "OpenCVHelper.h"
+//#include "OpenCVHelper.h" // DOS NOT WORK  error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
 #include "opencv2/unreal.hpp"
 #include "opencv2/opencv.hpp"
 #include "opencv2/core.hpp"

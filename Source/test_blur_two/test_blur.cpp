@@ -36,8 +36,7 @@ void Atest_blur::OpenCVGausianBlur()
 {
 
     // READ an image 
-//  Mat img_grayscale = imread("adipurush.png", 0); // image file is copied to the Vstudio project under source files 
-    //Mat img_grayscale = imread("D:\\behram\\C_dev\\opencv\\learn_opencv\\adipurush.png",0); // image file is in local folder
+
     cv::Mat img_color = imread("D:/behram/UE5_dev/opencv_nick/UE5_opencv/test_blur_two/Data/adipurush.png", cv::IMREAD_COLOR);
     auto outout_path = "D:/behram/UE5_dev/opencv_nick/UE5_opencv/test_blur_two/Data/dest/";
 
@@ -57,9 +56,10 @@ void Atest_blur::OpenCVGausianBlur()
     kernel2 = kernel2 / 25;
     cv::Mat img;
     filter2D(img_color, img, -1, kernel2, cv::Point(-1, -1), 0, 4);
-    /*  imshow("Original", img_color);
-      imshow("Kernel blur", img);*/
-    //imwrite("blur_kernel.jpg", img);
+    
+    //CRASH cv::Exception at memory location 0x0000004EFA978090.
+	imwrite("blur_kernel.jpg", img); 
+	// CRASH
 //    imwrite("D:/behram/UE5_dev/opencv_nick/UE5_opencv/test_blur_two/Data/dest/blur_kernel.jpg", img);
 
 
